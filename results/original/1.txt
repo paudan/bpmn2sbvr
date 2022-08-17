@@ -1,0 +1,12 @@
+1. [T1] Source: Resource Technician,Task Acknowledge,Resource Technician,Task Receive Notification -> output: It is obligatory that Technician Acknowledge after Technician Receive Notification
+2. [T2] Source: Task Update Case Status,Resource Technician,Resource Technician,Resource Technician -> output: It is permitted that Technician Update Case Status after Technician Connect Remotely to Client or Technician Work Offline
+3. [T2] Source: Task Connect Remotely to Client,Resource Technician,Resource Technician -> output: It is permitted that Technician Connect Remotely to Client after Technician Acknowledge
+4. [T5] Source: Task Review & Escalate,Resource Support Manager,Task Receive Notification,Resource Support Manager -> output: It is obligatory that Support Manager Review & Escalate after Support Manager Receive Notification
+5. [T5] Source: Task Update Client on Delay &Escl.,Resource Support Manager,Task Receive Notification,Resource Support Manager -> output: It is obligatory that Support Manager Update Client on Delay &Escl. after Support Manager Receive Notification
+6. [T2] Source: Task Work Offline,Resource Technician,Resource Technician -> output: It is permitted that Technician Work Offline after Technician Acknowledge
+7. [T6] Source: Resource Technician,Task Acknowledge,Timer Boundary Event if not ack. within 30 mins -> output: It is permitted that if not ack. within 30 mins when Technician Acknowledge
+8. [T1] Source: Resource Front Desk,Task Receive Notification,Resource Front Desk,Task Review & Escalate -> output: It is obligatory that Technician Receive Notification after Front Desk Review & Escalate
+9. [T1] Source: Resource Technician,None End Event End,Resource Technician,Task Update Case Status -> output: It is obligatory that End after Technician Update Case Status
+10. [T6] Source: Resource Technician,Task Acknowledge,Timer Boundary Event if not ack. within 30 mins,Task Receive Notification -> output: It is obligatory that Technician Receive Notification after ( if not ack. within 30 mins when Technician Acknowledge )
+11. [T1] Source: Task Review & Escalate,Message Start Event Receive Support Case -> output: It is obligatory that Front Desk Review & Escalate after Receive Support Case
+12. [T1] Source: Resource Support Manager,Task Receive Notification,Resource Support Manager,Task Review & Escalate -> output: It is obligatory that Technician Receive Notification after Support Manager Review & Escalate

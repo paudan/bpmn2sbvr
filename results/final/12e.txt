@@ -1,0 +1,6 @@
+1. [T1] Source: Resource Key account manager,Message Catch Intermediate Event Answer received,Resource Key account manager,Task Send mail to support system -> output: It is obligatory that Answer received after Key account manager Send mail to support system
+2. [T1] Source: Task Get problem description,Message Start Event Customer has a problem -> output: It is obligatory that Key account manager Get problem description after Customer has a problem
+3. [T2] Source: Task Explain solution,Resource Key account manager,Resource Key account manager,Sequence Flow yes -> output: It is obligatory that Key account manager Explain solution after Key account manager Get problem description and if yes
+4. [T1] Source: Task Explain solution,Message Catch Intermediate Event Answer received -> output: It is obligatory that Key account manager Explain solution after Answer received
+5. [T2] Source: Task Send mail to support system,Resource Key account manager,Resource Key account manager,Sequence Flow no -> output: It is obligatory that Key account manager Send mail to support system after Key account manager Get problem description and if no
+6. [T1] Source: Resource Key account manager,None End Event,Resource Key account manager,Task Explain solution -> output: It is obligatory that Process ends after Key account manager Explain solution

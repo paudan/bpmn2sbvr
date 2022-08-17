@@ -1,0 +1,8 @@
+1. [T1] Source: Resource Client,Task Submit Car Reservation,Resource Client,Task Select Car -> output: It is obligatory that Reservation Submit Car Reservation after Client Select Car
+2. [T1] Source: Task Enter User and Dates,None Start Event -> output: It is obligatory that Client Enter User and Dates after Process starts
+3. [T1] Source: Resource Reservation,Task Get Confirmation,Resource Reservation,Task Submit Car Reservation -> output: It is obligatory that Reservation Get Confirmation after Reservation Submit Car Reservation
+4. [T1] Source: Resource Reservation,Task Show Reservation,Resource Reservation,Task Get Confirmation -> output: It is obligatory that Client Show Reservation after Reservation Get Confirmation
+5. [T1] Source: Resource Client,None End Event,Resource Client,Task Show Reservation -> output: It is obligatory that Process ends after Client Show Reservation
+6. [T1] Source: Resource Reservation,Task Select Car,Resource Reservation,Task Set Available Cars -> output: It is obligatory that Client Select Car after Reservation Set Available Cars
+7. [T1] Source: Resource Client,Task Get Client Information,Resource Client,Task Enter User and Dates -> output: It is obligatory that CRM Get Client Information after Client Enter User and Dates
+8. [T1] Source: Resource CRM,Task Set Available Cars,Resource CRM,Task Get Client Information -> output: It is obligatory that Reservation Set Available Cars after CRM Get Client Information

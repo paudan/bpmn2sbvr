@@ -1,0 +1,10 @@
+1. [Complex] Source: Task Book Vacation,Resource Manager -> output: It is obligatory that Manager Book Vacation, after ( Manager Approve Vacation Request and if Approved )
+2. [Complex] Source: Task Mark vacation in Calendar,Resource Employee -> output: It is obligatory that Employee Mark vacation in Calendar, after ( Manager Approve Vacation Request and if Approved )
+3. [T1] Source: Resource Employee,Task Approve Vacation Request,Resource Employee,Task Update Vacation Request -> output: It is obligatory that Manager Approve Vacation Request after Employee Update Vacation Request
+4. [T9] Source: Message Flow,Resource Manager,LaneSet Employee,Message Start Event Receive Vacation Request -> output: It is permitted that Receive Vacation Request only when Manager receives Vacation request from Employee
+5. [T9] Source: LaneSet Employee,Message Flow,Resource Manager,Message Start Event Receive Vacation Request -> output: It is permitted that Employee sends Vacation request to Manager when Receive Vacation Request
+6. [T5] Source: None End Event Vacation Request Approved,Task Book Vacation,Resource Manager,Task Mark vacation in Calendar,Resource Employee -> output: It is obligatory that Vacation Request Approved after Manager Book Vacation and Employee Mark vacation in Calendar
+7. [T9] Source: Resource Manager,Message Flow,LaneSet HCM-System,Task Book Vacation -> output: It is permitted that Manager Book Vacation when sends Vacation to HCM-System
+8. [T2] Source: Task Update Vacation Request,Resource Employee,Resource Manager,Sequence Flow Not Approved -> output: It is obligatory that Employee Update Vacation Request after Manager Approve Vacation Request and if Not Approved
+9. [T9] Source: LaneSet HCM-System,Message Flow,Resource Manager -> output: It is permitted that HCM-System receives Vacation from Manager
+10. [T1] Source: Task Approve Vacation Request,Message Start Event Receive Vacation Request -> output: It is obligatory that Manager Approve Vacation Request after Receive Vacation Request

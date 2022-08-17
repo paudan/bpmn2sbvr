@@ -1,0 +1,15 @@
+1. [T9] Source: Resource Developer,Message Flow,Resource Administrator,Task Notify administrator,Task Install new version -> output: It is permitted that Developer Notify administrator when sends message to Administrator when Administrator Install new version
+2. [T2] Source: Task Notify user,Resource Developer,Resource Developer,Sequence Flow No Bug exists -> output: It is obligatory that Developer Notify user after Developer Verify bug and if No Bug exists
+3. [T9] Source: Resource Administrator,Message Flow,Resource Developer,Task Install new version -> output: It is permitted that Administrator receives message from Developer when Developer Install new version
+4. [T2] Source: SubProcess Fix bug,Resource Developer,Resource Developer,Sequence Flow Bug exists -> output: It is obligatory that Developer Fix bug after Developer Verify bug and if Bug exists
+5. [T7] Source: Data Object New application,Resource Developer,SubProcess Fix bug -> output: It is obligatory that New application is produced when Developer Fix bug
+6. [T9] Source: Resource Developer,Message Flow,Resource User,Task Verify bug -> output: It is permitted that Developer receives message from User when User Verify bug
+7. [T9] Source: Resource Developer,Message Flow,Resource User,Task Notify user,Task Use application -> output: It is permitted that Developer Notify user when sends message to User when User Use application
+8. [T1] Source: Resource User,None End Event,Resource User,Task Use application -> output: It is obligatory that Process ends after User Use application
+9. [T9] Source: Resource User,Message Flow,Resource Developer,Task Use application -> output: It is permitted that User receives message from Developer when Developer Use application
+10. [T9] Source: Resource Administrator,Message Flow,Resource User,Task Notify user,Task Use application -> output: It is permitted that Administrator Notify user when sends message to User when User Use application
+11. [T1] Source: Resource Developer,Task Notify administrator,Resource Developer,SubProcess Fix bug -> output: It is obligatory that Developer Notify administrator after Developer Fix bug
+12. [T1] Source: Task report bug,Message Start Event -> output: It is obligatory that User report bug after Process starts
+13. [T9] Source: Resource User,Message Flow,Resource Developer,Task report bug,Task Verify bug -> output: It is permitted that User report bug when sends message to Developer when Developer Verify bug
+14. [T9] Source: Resource User,Message Flow,Resource Administrator,Task Use application -> output: It is permitted that User receives message from Administrator when Administrator Use application
+15. [T1] Source: Resource Administrator,Task Notify user,Resource Administrator,Task Install new version -> output: It is obligatory that Administrator Notify user after Administrator Install new version

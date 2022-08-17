@@ -1,0 +1,38 @@
+1. [T1] Source: SubProcess Cancel Reservation,Timer Catch Intermediate Event 1 week -> output: It is obligatory that Librarian Cancel Reservation after 1 week has passed
+2. [T2] Source: Timer Catch Intermediate Event 1 week,Resource Librarian,Sequence Flow -> output: It is obligatory that 1 week has passed after Librarian Notify First Waiting Reader and if reader comes other than in a week
+3. [T2] Source: Timer Catch Intermediate Event 1 week,Sequence Flow -> output: It is obligatory that 1 week has passed after Reservation Available and if contacts librarian other than in a week
+4. [T9] Source: Resource Librarian,Message Flow,Resource Reader,Task Notify First Waiting Reader,Message Catch Intermediate Event Reservation Available -> output: It is permitted that Librarian Notify First Waiting Reader when sends message to Reader when Reservation Available
+5. [T9] Source: Resource Librarian,Message Flow,Resource Reader,Task Register Loan,Task Get Item -> output: It is permitted that Librarian Register Loan when sends message to Reader when Reader Get Item
+6. [T1] Source: Task Notify First Waiting Reader,Message Catch Intermediate Event Item Available -> output: It is obligatory that Librarian Notify First Waiting Reader after Item Available
+7. [T7] Source: Task Register Loan,Resource Librarian,Data Object -> output: It is permitted that Librarian Register Loan only if Item is provided to Librarian
+8. [T2] Source: Task Get Item,Resource Reader,Sequence Flow -> output: It is obligatory that Reader Get Item after Reservation Available and if contacts librarian in a week
+9. [T1] Source: SubProcess Register Return,Message Catch Intermediate Event Item Return -> output: It is obligatory that Librarian Register Return after Item Return
+10. [T7] Source: Task Notify First Waiting Reader,Resource Librarian,Data Object -> output: It is permitted that Librarian Notify First Waiting Reader only if Notification is provided to Librarian
+11. [T1] Source: Resource Reader,None End Event,Resource Reader,Task Return Item -> output: It is obligatory that Process ends after Reader Return Item
+12. [T9] Source: Resource Reader,Message Flow,Resource Librarian,Task Return Item,SubProcess Register Return -> output: It is permitted that Reader Return Item when sends message to Librarian when Librarian Register Return
+13. [T2] Source: Task Register Loan,Resource Librarian,Resource Librarian,Sequence Flow -> output: It is obligatory that Librarian Register Loan after Librarian Register Reservation and if item available
+14. [T1] Source: Resource Librarian,Message Catch Intermediate Event Item Return,Resource Librarian,Task Register Loan -> output: It is obligatory that Item Return after Librarian Register Loan
+15. [T9] Source: Resource Reader,Message Flow,Resource Librarian,Task Make Reservation,Task Register Reservation -> output: It is permitted that Reader Make Reservation when sends message to Librarian when Librarian Register Reservation
+16. [T9] Source: Resource Librarian,Message Flow,Resource Reader,Task Register Reservation,Task Make Reservation -> output: It is permitted that Librarian Register Reservation when sends message to Reader when Reader Make Reservation
+17. [T9] Source: Resource Reader,Message Flow,Resource Librarian,Task Get Item -> output: It is permitted that Reader receives message from Librarian when Librarian Get Item
+18. [T1] Source: Task Find Wanted Title,None Start Event -> output: It is obligatory that Reader Find Wanted Title after Process starts
+19. [T1] Source: Resource Librarian,None End Event,Resource Librarian,SubProcess Cancel Reservation -> output: It is obligatory that Process ends after Librarian Cancel Reservation
+20. [T9] Source: Resource Librarian,Message Flow,Resource Reader,SubProcess Register Return -> output: It is permitted that Librarian receives message from Reader when Reader Register Return
+21. [T1] Source: Task Register Reservation,None Start Event -> output: It is obligatory that Librarian Register Reservation after Process starts
+22. [T9] Source: Resource Reader,Message Flow,Resource Librarian,Task Make Reservation -> output: It is permitted that Reader receives message from Librarian when Librarian Make Reservation
+23. [T9] Source: Resource Librarian,Message Flow,Resource Reader,Task Register Reservation -> output: It is permitted that Librarian receives message from Reader when Reader Register Reservation
+24. [T1] Source: Resource Librarian,None End Event,Resource Librarian,SubProcess Register Return -> output: It is obligatory that Process ends after Librarian Register Return
+25. [T7] Source: Task Return Item,Resource Reader,Data Object -> output: It is permitted that Reader Return Item only if Item is provided to Reader
+26. [T1] Source: Resource Librarian,Message Catch Intermediate Event Item Available,Resource Librarian,Task Put Reservation to the Waiting List -> output: It is obligatory that Item Available after Librarian Put Reservation to the Waiting List
+27. [T9] Source: Resource Reader,Message Flow,Resource Librarian,Task Get Item,Task Register Loan -> output: It is permitted that Reader Get Item when sends message to Librarian when Librarian Register Loan
+28. [T7] Source: Task Make Reservation,Resource Reader,Data Object -> output: It is permitted that Reader Make Reservation only if Title is provided to Reader
+29. [T1] Source: None End Event,Timer Catch Intermediate Event 1 week -> output: It is obligatory that Process ends after 1 week has passed
+30. [T2] Source: Task Put Reservation to the Waiting List,Resource Librarian,Resource Librarian,Sequence Flow -> output: It is obligatory that Librarian Put Reservation to the Waiting List after Librarian Register Reservation and if item not available
+31. [T2] Source: Task Register Loan,Resource Librarian,Resource Librarian,Sequence Flow -> output: It is obligatory that Librarian Register Loan after Librarian Notify First Waiting Reader and if reader comes in a week
+32. [T9] Source: Message Flow,Resource Reader,Task Notify First Waiting Reader,Message Catch Intermediate Event Reservation Available -> output: It is permitted that Reservation Available only when Reader receives message from Notify First Waiting Reader
+33. [T9] Source: Resource Librarian,Message Flow,Resource Reader,Task Register Loan -> output: It is permitted that Librarian receives message from Reader when Reader Register Loan
+34. [T7] Source: Task Register Reservation,Resource Librarian,Data Object -> output: It is permitted that Librarian Register Reservation only if Reservation is provided to Librarian
+35. [T1] Source: Resource Reader,Task Make Reservation,Resource Reader,Task Find Wanted Title -> output: It is obligatory that Reader Make Reservation after Reader Find Wanted Title
+36. [T1] Source: Resource Reader,Message Catch Intermediate Event Reservation Available,Resource Reader,Task Make Reservation -> output: It is obligatory that Reservation Available after Reader Make Reservation
+37. [T1] Source: Resource Reader,Task Return Item,Resource Reader,Task Use Item -> output: It is obligatory that Reader Return Item after Reader Use Item
+38. [T1] Source: Resource Reader,Task Use Item,Resource Reader,Task Get Item -> output: It is obligatory that Reader Use Item after Reader Get Item

@@ -1,0 +1,17 @@
+1. [T2] Source: None End Event,Resource Business participant,Sequence Flow No -> output: It is obligatory that Process ends after Business participant Check Calendar for Conference Call and if No
+2. [T1] Source: Timer Catch Intermediate Event Delay 6 Days,None Start Event -> output: It is obligatory that Delay 6 Days has passed after Process starts
+3. [T2] Source: Timer Catch Intermediate Event Wait until Thursday, 9am,Resource Business participant,Sequence Flow Yes -> output: It is obligatory that Wait until Thursday, 9am has passed after Business participant Check Calendar for Conference Call and if Yes
+4. [T1] Source: Resource Business participant,Task Receive Vote,Resource Business participant,Task Increment Tally -> output: It is obligatory that Business participant Receive Vote after Business participant Increment Tally
+5. [T1] Source: Task Moderate E-mail Discussion,None Start Event -> output: It is obligatory that Business participant Moderate E-mail Discussion after Process starts
+6. [T1] Source: Resource Business participant,None End Event,Resource Business participant,Task Moderate E-mail Discussion -> output: It is obligatory that Process ends after Business participant Moderate E-mail Discussion
+7. [T1] Source: Resource Business participant,None End Event,Resource Business participant,Task Moderate Conference Call Discussion -> output: It is obligatory that Process ends after Business participant Moderate Conference Call Discussion
+8. [T7] Source: Task Check Calendar for Conference Call,Resource Business participant,Data Object Calendar -> output: It is permitted that Business participant Check Calendar for Conference Call only if Calendar is provided to Business participant
+9. [T7] Source: Data Object Vote,Resource Business participant,Task Receive Vote -> output: It is obligatory that Vote is produced when Business participant Receive Vote
+10. [T7] Source: Task Increment Tally,Resource Business participant,Data Object Vote -> output: It is permitted that Business participant Increment Tally only if Vote is provided to Business participant
+11. [T1] Source: Task E-Mail Vote Deadline Warning,Timer Catch Intermediate Event Delay 6 Days -> output: It is obligatory that Business participant E-Mail Vote Deadline Warning after Delay 6 Days has passed
+12. [T1] Source: Task Receive Vote,None Start Event -> output: It is obligatory that Business participant Receive Vote after Process starts
+13. [T1] Source: Task Check Calendar for Conference Call,None Start Event -> output: It is obligatory that Business participant Check Calendar for Conference Call after Process starts
+14. [T1] Source: Resource Business participant,Task Increment Tally,Resource Business participant,Task Receive Vote -> output: It is obligatory that Business participant Increment Tally after Business participant Receive Vote
+15. [T7] Source: Data Object Vote Tally,Resource Business participant,Task Increment Tally -> output: It is obligatory that Vote Tally is produced when Business participant Increment Tally
+16. [T1] Source: Resource Business participant,None End Event,Resource Business participant,Task E-Mail Vote Deadline Warning -> output: It is obligatory that Process ends after Business participant E-Mail Vote Deadline Warning
+17. [T1] Source: Task Moderate Conference Call Discussion,Timer Catch Intermediate Event Wait until Thursday, 9am -> output: It is obligatory that Business participant Moderate Conference Call Discussion after Wait until Thursday, 9am has passed

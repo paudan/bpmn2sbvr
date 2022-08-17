@@ -1,0 +1,6 @@
+1. [T2] Source: Task Suggest Change,Resource Sales Representative,Resource Sales Representative,Sequence Flow No -> output: It is obligatory that Sales Representative Suggest Change after Sales Representative Check Stock Level and if No
+2. [T1] Source: Resource Warehouse,None End Event Order Completed,Resource Warehouse,Task Ship Goods -> output: It is obligatory that Order Completed after Warehouse Ship Goods
+3. [T2] Source: Task Request Pack Goods,Resource Sales Representative,Resource Sales Representative,Sequence Flow Yes -> output: It is obligatory that Sales Representative Request Pack Goods after Sales Representative Check Stock Level and if Yes
+4. [T1] Source: Task Check Stock Level,Message Start Event Order Received -> output: It is obligatory that Sales Representative Check Stock Level after Order Received
+5. [T1] Source: Resource Sales Representative,Task Pack Goods,Resource Sales Representative,Task Request Pack Goods -> output: It is obligatory that Warehouse Pack Goods after Sales Representative Request Pack Goods
+6. [T1] Source: Resource Warehouse,Task Ship Goods,Resource Warehouse,Task Pack Goods -> output: It is obligatory that Warehouse Ship Goods after Warehouse Pack Goods

@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Eclipse">
+    <CLASSES>
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.core.contenttype_3.6.0.v20170207-1037.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.core.jobs_3.9.2.v20171030-1027.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.core.runtime_3.13.0.v20170207-1030.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.emf.common_2.13.0.v20170609-0707.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.emf.ecore.xmi_2.13.0.v20170609-0707.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.emf.ecore_2.13.0.v20170609-0707.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.equinox.app_1.3.400.v20150715-1528.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.equinox.common_3.9.0.v20170207-1454.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.equinox.ds_1.5.0.v20170307-1429.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.equinox.preferences_3.7.0.v20170126-2132.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.equinox.registry_3.7.0.v20170222-1344.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.osgi.services_3.6.0.v20170228-1906.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.osgi.util_3.4.0.v20170111-1608.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.osgi_3.12.50.v20170928-1321.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.eclipse.uml2.common_1.5.0.v200905041045.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

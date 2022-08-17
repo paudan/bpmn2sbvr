@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="JUnit">
+    <CLASSES>
+      <root url="file://$MAGICDRAW19_DIR$/lib/bundles/org.junit_4.12.0.v201504281640" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$MAGICDRAW19_DIR$/lib/bundles/org.junit_4.12.0.v201504281640" recursive="false" />
+  </library>
+</component>

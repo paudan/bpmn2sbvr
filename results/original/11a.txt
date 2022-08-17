@@ -1,0 +1,11 @@
+1. [T2] Source: Task Prepare contract,Resource Sales rep,Resource Sales manager,Resource Sales rep -> output: It is permitted that Sales rep Prepare contract after Sales manager Prepare special terms or Sales rep Calculate terms
+2. [T9] Source: LaneSet Customer,Message Flow,Resource Sales rep -> output: It is permitted that Customer receives message from Sales rep
+3. [T1] Source: Resource Sales rep,None End Event Quote sent,Resource Sales rep,Task Send quote -> output: It is obligatory that Quote sent after Sales rep Send quote
+4. [T9] Source: LaneSet Customer,Message Flow,Resource Sales rep,Message Start Event Credit request -> output: It is permitted that Customer sends message to Sales rep when Credit request
+5. [T5] Source: Task Send quote,Resource Sales rep,Task Assess risks,Resource Risk Analyst,Task Prepare contract,Resource Sales rep -> output: It is obligatory that Sales rep Send quote after Risk Analyst Assess risks and Sales rep Prepare contract
+6. [T9] Source: Resource Sales rep,Message Flow,LaneSet Customer,Task Send quote -> output: It is permitted that Sales rep Send quote when sends message to Customer
+7. [T1] Source: Task Review request,Message Start Event Credit request -> output: It is obligatory that Sales rep Review request after Credit request
+8. [T9] Source: Message Flow,Resource Sales rep,LaneSet Customer,Message Start Event Credit request -> output: It is permitted that Credit request only when Sales rep receives message from Customer
+9. [T5] Source: Task Assess risks,Resource Risk Analyst,Task Review request,Resource Sales rep -> output: It is obligatory that Risk Analyst Assess risks after Sales rep Review request
+10. [Complex] Source: Task Calculate terms,Resource Sales rep,Sequence Flow Standard terms applicable -> output: It is obligatory that Sales rep Calculate terms if Standard terms applicable, after ( Sales rep Review request if not ( Risk Analyst Assess risks ) )
+11. [Complex] Source: Task Prepare special terms,Resource Sales manager,Sequence Flow Standard terms not applicable -> output: It is obligatory that Sales manager Prepare special terms if Standard terms not applicable, after ( Sales rep Review request if not ( Risk Analyst Assess risks ) )

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="log4j">
+    <CLASSES>
+      <root url="jar://$MAGICDRAW19_DIR$/lib/bundles/org.apache.log4j_1.2.15.v201005080500.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

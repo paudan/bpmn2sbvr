@@ -1,0 +1,16 @@
+1. [T1] Source: Resource Business participant,Task Get Book Status,Resource Business participant,Task Receive Book Request -> output: It is obligatory that Business participant Get Book Status after Business participant Receive Book Request
+2. [T4] Source: Message Catch Intermediate Event Decline Book,Task On Loan Reply,Resource Business participant -> output: It is permitted that Decline Book after Business participant On Loan Reply
+3. [T4] Source: Timer Catch Intermediate Event 1 Week,Task On Loan Reply,Resource Business participant -> output: It is permitted that 1 Week has passed after Business participant On Loan Reply
+4. [T1] Source: Task Cancel Request,Timer Catch Intermediate Event 1 Week -> output: It is obligatory that Business participant Cancel Request after 1 Week has passed
+5. [T1] Source: Resource Business participant,Task Hold Reply,Resource Business participant,Task Request Hold -> output: It is obligatory that Business participant Hold Reply after Business participant Request Hold
+6. [T1] Source: Resource Business participant,Task Checkout Reply,Resource Business participant,Task Checkout Book -> output: It is obligatory that Business participant Checkout Reply after Business participant Checkout Book
+7. [T1] Source: Resource Business participant,None End Event,Resource Business participant,Task Checkout Reply -> output: It is obligatory that Process ends after Business participant Checkout Reply
+8. [T2] Source: Task Checkout Book,Resource Business participant,Resource Business participant,Sequence Flow Book is Available -> output: It is obligatory that Business participant Checkout Book after Business participant Get Book Status and if Book is Available
+9. [T2] Source: Task On Loan Reply,Resource Business participant,Resource Business participant,Sequence Flow Book is Loan -> output: It is obligatory that Business participant On Loan Reply after Business participant Get Book Status and if Book is Loan
+10. [T6] Source: Resource Business participant,Task Hold Reply,Timer Boundary Event 2 Weeks,Task Get Book Status -> output: It is obligatory that Business participant Get Book Status after ( 2 Weeks when Business participant Hold Reply )
+11. [T1] Source: Task Request Hold,Message Catch Intermediate Event Hold Book -> output: It is obligatory that Business participant Request Hold after Hold Book
+12. [T6] Source: Resource Business participant,Task Hold Reply,Timer Boundary Event 2 Weeks -> output: It is permitted that 2 Weeks when Business participant Hold Reply
+13. [T4] Source: Message Catch Intermediate Event Hold Book,Task On Loan Reply,Resource Business participant -> output: It is permitted that Hold Book after Business participant On Loan Reply
+14. [T1] Source: Task Cancel Request,Message Catch Intermediate Event Decline Book -> output: It is obligatory that Business participant Cancel Request after Decline Book
+15. [T1] Source: Resource Business participant,None End Event,Resource Business participant,Task Cancel Request -> output: It is obligatory that Process ends after Business participant Cancel Request
+16. [T1] Source: Task Receive Book Request,None Start Event -> output: It is obligatory that Business participant Receive Book Request after Process starts

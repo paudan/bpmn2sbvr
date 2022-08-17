@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="MagicDraw Runtime">
+    <CLASSES>
+      <root url="jar://$MAGICDRAW19_DIR$/lib/md.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/md_api.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/md_common.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/md_common_api.jar!/" />
+      <root url="jar://$MAGICDRAW19_DIR$/lib/md_common_test.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+1. [T2] Source: Task Propose Booking Status,Resource Travel Agent,Resource Travel Agent -> output: It is permitted that Travel Agent Propose Booking Status after Travel Agent Check Availability
+2. [T1] Source: Resource Travel Agent,Message Catch Intermediate Event Assignment Complete,Resource Travel Agent,Task Confirm Booking -> output: It is obligatory that Assignment Complete after Travel Agent Confirm Booking
+3. [T2] Source: None End Event,Resource Travel Agent,Sequence Flow Not Accepted -> output: It is obligatory that Process ends after Travel Agent Propose Booking Status and if Not Accepted
+4. [T2] Source: Task Get Alternative Time,Resource Travel Agent,Resource Travel Agent -> output: It is permitted that Travel Agent Get Alternative Time after Travel Agent Check Availability
+5. [T1] Source: Resource Travel Agent,Task Propose Booking Status,Resource Travel Agent,Task Get Alternative Time -> output: It is obligatory that Travel Agent Propose Booking Status after Travel Agent Get Alternative Time
+6. [T1] Source: None End Event End,Message Catch Intermediate Event Assignment Complete -> output: It is obligatory that End after Assignment Complete
+7. [T1] Source: Resource Cab Driver,Task Complete Assignment,Resource Cab Driver,Task Pickup Customer -> output: It is obligatory that Cab Driver Complete Assignment after Cab Driver Pickup Customer
+8. [T2] Source: Task Confirm Booking,Resource Travel Agent,Resource Travel Agent,Sequence Flow Accepted -> output: It is obligatory that Travel Agent Confirm Booking after Travel Agent Propose Booking Status and if Accepted
+9. [T1] Source: Resource Cab Driver,None End Event End,Resource Cab Driver,Task Complete Assignment -> output: It is obligatory that End after Cab Driver Complete Assignment
+10. [T1] Source: Resource Customer,Message Catch Intermediate Event Booking Details,Resource Customer,Task Request Booking -> output: It is obligatory that Booking Details after Customer Request Booking
+11. [T1] Source: Task Get Booking Request,Message Start Event Calls for Cab Booking -> output: It is obligatory that Travel Agent Get Booking Request after Calls for Cab Booking
+12. [T1] Source: Resource Travel Agent,Task Check Availability,Resource Travel Agent,Task Get Booking Request -> output: It is obligatory that Travel Agent Check Availability after Travel Agent Get Booking Request

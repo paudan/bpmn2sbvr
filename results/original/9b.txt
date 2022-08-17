@@ -1,0 +1,12 @@
+1. [T9] Source: Message Flow Purchase Order,Resource Sales Representative,LaneSet,Message Start Event Order Received -> output: It is permitted that Order Received only when Sales Representative receives Purchase Order from null
+2. [T1] Source: Resource Warehouse,None End Event Order Completed,Resource Warehouse,Task Ship Goods -> output: It is obligatory that Order Completed after Warehouse Ship Goods
+3. [T1] Source: Task Check Stock Level,Message Start Event Order Received -> output: It is obligatory that Sales Representative Check Stock Level after Order Received
+4. [T1] Source: Resource Sales Representative,Task Pack Goods,Resource Sales Representative,Task Request Pack Goods -> output: It is obligatory that Warehouse Pack Goods after Sales Representative Request Pack Goods
+5. [T9] Source: LaneSet,Message Flow Invoice,Resource Warehouse -> output: It is permitted that Customer receives Invoice from Warehouse
+6. [T9] Source: Resource Warehouse,Message Flow Invoice,LaneSet,Task Ship Goods -> output: It is permitted that Warehouse Ship Goods when sends Invoice to Customer
+7. [T9] Source: LaneSet,Message Flow Request of Changing PO,Resource Sales Representative -> output: It is permitted that Customer receives Request of Changing PO from Sales Representative
+8. [T9] Source: LaneSet,Message Flow Purchase Order,Resource Sales Representative,Message Start Event Order Received -> output: It is permitted that Customer sends Purchase Order to Sales Representative when Order Received
+9. [T1] Source: Resource Warehouse,Task Ship Goods,Resource Warehouse,Task Pack Goods -> output: It is obligatory that Warehouse Ship Goods after Warehouse Pack Goods
+10. [T9] Source: Resource Sales Representative,Message Flow Request of Changing PO,LaneSet,Task Suggest Change -> output: It is permitted that Sales Representative Suggest Change when sends Request of Changing PO to Customer
+11. [T2] Source: Task Suggest Change,Resource Sales Representative,Resource Sales Representative,Sequence Flow Not Sufficient Stock -> output: It is obligatory that Sales Representative Suggest Change after Sales Representative Check Stock Level and if Not Sufficient Stock
+12. [T2] Source: Task Request Pack Goods,Resource Sales Representative,Resource Sales Representative,Sequence Flow Sufficient Stock -> output: It is obligatory that Sales Representative Request Pack Goods after Sales Representative Check Stock Level and if Sufficient Stock

@@ -1,0 +1,23 @@
+1. [T2] Source: Task Reject Application,Resource Recruiter,Resource Recruiter -> output: It is permitted that Recruiter Reject Application after Recruiter Review Application
+2. [T1] Source: Resource Recruiter,Task Interview,Resource Recruiter,Task Schedule Interview -> output: It is obligatory that Interviewer Interview after Recruiter Schedule Interview
+3. [T1] Source: Resource Candidate,Task Submit Application,Resource Candidate,SubProcess Create Application -> output: It is obligatory that Candidate Submit Application after Candidate Create Application
+4. [T1] Source: Resource Interviewer,Task Collect Feedback,Resource Interviewer,Task Interview -> output: It is obligatory that Recruiter Collect Feedback after Interviewer Interview
+5. [T1] Source: Resource Recruiter,Task Submit Offer,Resource Recruiter,Task Prepare Offer -> output: It is obligatory that Recruiter Submit Offer after Recruiter Prepare Offer
+6. [T1] Source: Resource Recruiter,Task Interview,Resource Recruiter,Task Schedule Interview -> output: It is obligatory that Recruiter Interview after Recruiter Schedule Interview
+7. [T1] Source: Resource Recruiter,Task Collect Feedback,Resource Recruiter,Task Interview -> output: It is obligatory that Recruiter Collect Feedback after Recruiter Interview
+8. [T1] Source: Resource Recruiter,SubProcess Hire Candidate,Resource Recruiter,Task Submit Offer -> output: It is obligatory that Recruiter Hire Candidate after Recruiter Submit Offer
+9. [T1] Source: SubProcess Create Application,None Start Event -> output: It is obligatory that Candidate Create Application after Process starts
+10. [T1] Source: Resource Candidate,Task Fill out Employment Forms,Resource Candidate,Task Review Offer -> output: It is obligatory that Candidate Fill out Employment Forms after Candidate Review Offer
+11. [T2] Source: Task Prepare Offer,Resource Recruiter,Resource Recruiter -> output: It is permitted that Recruiter Prepare Offer after Recruiter Collect Feedback
+12. [T7] Source: Task Schedule Interview,Resource Recruiter,Data Object Interview,Data Object Interview -> output: It is permitted that Recruiter Schedule Interview only if Interview is provided to Recruiter and Interview is provided to Recruiter
+13. [T1] Source: Resource Recruiter,None End Event,Resource Recruiter,Task Reject Application -> output: It is obligatory that Process ends after Recruiter Reject Application
+14. [T7] Source: Task Review Application,Resource Recruiter,Data Object Request -> output: It is permitted that Recruiter Review Application only if Request is provided to Recruiter
+15. [T2] Source: Task Schedule Interview,Resource Recruiter,Resource Recruiter -> output: It is permitted that Recruiter Schedule Interview after Recruiter Review Application
+16. [T1] Source: Task Review Application,None Start Event -> output: It is obligatory that Recruiter Review Application after Process starts
+17. [T1] Source: Resource Candidate,Task Review Offer,Resource Candidate,Task Interview -> output: It is obligatory that Candidate Review Offer after Candidate Interview
+18. [T7] Source: Task Submit Offer,Resource Recruiter,Data Object Offer -> output: It is permitted that Recruiter Submit Offer only if Offer is provided to Recruiter
+19. [T1] Source: Resource Candidate,None End Event,Resource Candidate,Task Fill out Employment Forms -> output: It is obligatory that Process ends after Candidate Fill out Employment Forms
+20. [T1] Source: Resource Recruiter,None End Event,Resource Recruiter,SubProcess Hire Candidate -> output: It is obligatory that Process ends after Recruiter Hire Candidate
+21. [T2] Source: Task Interview,Resource Candidate,Resource Candidate -> output: It is permitted that Candidate Interview after Candidate Submit Application and if not ( Rejected )
+22. [T2] Source: None End Event,Resource Candidate,Sequence Flow Rejected -> output: It is obligatory that Process ends after Candidate Submit Application and if Rejected
+23. [T2] Source: Task Reject Application,Resource Recruiter,Resource Recruiter -> output: It is permitted that Recruiter Reject Application after Recruiter Collect Feedback

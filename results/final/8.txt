@@ -1,0 +1,16 @@
+1. [T2] Source: Signal End Event Customer Abortion,Resource Customer,Sequence Flow No -> output: It is obligatory that Customer Abortion after Customer Confirm Interest and if No
+2. [T1] Source: Task Select Travel,None Start Event Start -> output: It is obligatory that Customer Select Travel after Start
+3. [T1] Source: Resource Customer,None End Event End,Resource Customer,Task Provide Customer Data -> output: It is obligatory that End after Customer Provide Customer Data
+4. [T2] Source: Task Provide Customer Data,Resource Customer,Resource Customer,Sequence Flow Yes -> output: It is obligatory that Customer Provide Customer Data after Customer Confirm Interest and if Yes
+5. [T7] Source: Task Check Availability,Resource Sales Department,Data Object Order -> output: It is permitted that Sales Department Check Availability only if Order is provided to Sales Department
+6. [T1] Source: Task Indicate Price,None Start Event Travel Request -> output: It is obligatory that Sales Department Indicate Price after Travel Request
+7. [T5] Source: Task Book Travel,Resource Sales Department,Task Check Availability,Resource Sales Department,Task Check Solvency,Resource Administrative Department -> output: It is obligatory that Sales Department Book Travel after Sales Department Check Availability and Administrative Department Check Solvency
+8. [T1] Source: Resource Sales Department,Task Initiate File,Resource Sales Department,Task Indicate Price -> output: It is obligatory that Sales Department Initiate File after Sales Department Indicate Price
+9. [T1] Source: Resource Sales Department,Task Bill,Resource Sales Department,Task Book Travel -> output: It is obligatory that Administrative Department Bill after Sales Department Book Travel
+10. [T5] Source: Task Check Solvency,Resource Administrative Department,Task Initiate File,Resource Sales Department -> output: It is obligatory that Administrative Department Check Solvency after Sales Department Initiate File
+11. [T7] Source: Task Bill,Resource Administrative Department,Data Object Order -> output: It is permitted that Administrative Department Bill only if Order is provided to Administrative Department
+12. [T7] Source: Data Object Order,Resource Sales Department,Task Initiate File -> output: It is obligatory that Order is produced when Sales Department Initiate File
+13. [T5] Source: Task Check Availability,Resource Sales Department,Task Initiate File,Resource Sales Department -> output: It is obligatory that Sales Department Check Availability after Sales Department Initiate File
+14. [T1] Source: Resource Administrative Department,None End Event End,Resource Administrative Department,Task Bill -> output: It is obligatory that End after Administrative Department Bill
+15. [T7] Source: Data Object Bill,Resource Administrative Department,Task Bill -> output: It is obligatory that Bill is produced when Administrative Department Bill
+16. [T1] Source: Resource Customer,Task Confirm Interest,Resource Customer,Task Select Travel -> output: It is obligatory that Customer Confirm Interest after Customer Select Travel

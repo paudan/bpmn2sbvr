@@ -1,0 +1,9 @@
+1. [T4] Source: Message Catch Intermediate Event Payment Received,Task Inform Customer about Overdue Payment,Resource Business participant -> output: It is permitted that Payment Received after Business participant Inform Customer about Overdue Payment
+2. [T1] Source: None End Event Good Loan,Message Catch Intermediate Event Payment Received -> output: It is obligatory that Good Loan after Payment Received
+3. [T4] Source: Timer Catch Intermediate Event 30 days,Task Send Registered Warning Letter,Resource Business participant -> output: It is permitted that 30 days has passed after Business participant Send Registered Warning Letter
+4. [T1] Source: Task Send Registered Warning Letter,Timer Catch Intermediate Event 30 days -> output: It is obligatory that Business participant Send Registered Warning Letter after 30 days has passed
+5. [T1] Source: Task Inform Customer about Overdue Payment,Message Start Event Overdue Payment -> output: It is obligatory that Business participant Inform Customer about Overdue Payment after Overdue Payment
+6. [T4] Source: Timer Catch Intermediate Event 30 days,Task Inform Customer about Overdue Payment,Resource Business participant -> output: It is permitted that 30 days has passed after Business participant Inform Customer about Overdue Payment
+7. [T1] Source: None End Event Good Loan,Message Catch Intermediate Event Payment Received -> output: It is obligatory that Good Loan after Payment Received
+8. [T1] Source: Task Start Investigation,Timer Catch Intermediate Event 30 days -> output: It is obligatory that Business participant Start Investigation after 30 days has passed
+9. [T4] Source: Message Catch Intermediate Event Payment Received,Task Send Registered Warning Letter,Resource Business participant -> output: It is permitted that Payment Received after Business participant Send Registered Warning Letter

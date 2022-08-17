@@ -1,0 +1,11 @@
+1. [Complex] Source: Message Catch Intermediate Event Payment Received -> output: It is obligatory that Payment Received, after ( Payment Received and Payment Received and if Loan not fully paid )
+2. [T1] Source: Task Send Registered Warning Letter,Timer Catch Intermediate Event 30 days -> output: It is obligatory that Business participant Send Registered Warning Letter after 30 days has passed
+3. [T1] Source: Resource Business participant,None End Event,Resource Business participant,SubProcess Close Loan -> output: It is obligatory that Process ends after Business participant Close Loan
+4. [T1] Source: Task Inform Customer about Overdue Payment,None Start Event -> output: It is obligatory that Business participant Inform Customer about Overdue Payment after Process starts
+5. [T1] Source: SubProcess Administer Bad Loan,Timer Catch Intermediate Event Payment Overdue -> output: It is obligatory that Business participant Administer Bad Loan after Payment Overdue has passed
+6. [T1] Source: Resource Business participant,Timer Catch Intermediate Event 30 days,Resource Business participant,Task Inform Customer about Overdue Payment -> output: It is obligatory that 30 days has passed after Business participant Inform Customer about Overdue Payment
+7. [T1] Source: Resource Business participant,Timer Catch Intermediate Event 30 days,Resource Business participant,Task Send Registered Warning Letter -> output: It is obligatory that 30 days has passed after Business participant Send Registered Warning Letter
+8. [Complex] Source: Timer Catch Intermediate Event Payment Overdue -> output: It is obligatory that Payment Overdue has passed, after ( Payment Received and Payment Received and if Loan not fully paid )
+9. [T6] Source: Resource Business participant,SubProcess Administer Bad Loan,Message Boundary Event Payment Received -> output: It is permitted that Payment Received when Business participant Administer Bad Loan
+10. [T2] Source: SubProcess Close Loan,Resource Business participant,Sequence Flow Loan fully paid -> output: It is obligatory that Business participant Close Loan after Payment Received or Payment Received and if Loan fully paid
+11. [T1] Source: Task Start Investigation,Timer Catch Intermediate Event 30 days -> output: It is obligatory that Business participant Start Investigation after 30 days has passed
