@@ -76,7 +76,7 @@ public class BPMNExtractionExperimentTest extends BpmnExtractionTestCase {
     public void testExtractModels() {
         String dirName = "results";
         try {
-            Files.createDirectories(Paths.get(dirName));
+            Files.createDirectories(Paths.get(dirName, "refactored"));
         } catch (IOException e) {
             Logger.getLogger(getName()).log(Level.SEVERE, null, e);
         }
@@ -89,7 +89,7 @@ public class BPMNExtractionExperimentTest extends BpmnExtractionTestCase {
             for (String ruleName: ruleNames)
                 modelStats.put(ruleName, 0);
             ruleStats.put(modelName, modelStats);
-            String filePath = Paths.get(dirName, modelName + ".txt").toString();
+            String filePath = Paths.get(dirName, "refactored", modelName + ".txt").toString();
             try (Writer writer = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(Paths.get(filePath)), StandardCharsets.UTF_8))) {
                 Map<String, Map<SourceEntry, ConceptExtractionEntry>> mapByRule = objectsByRuleName(extractor.getBRCandidateModel().getDataset());
                 for (Map<SourceEntry, ConceptExtractionEntry> ruleSet: mapByRule.values())
@@ -98,6 +98,6 @@ public class BPMNExtractionExperimentTest extends BpmnExtractionTestCase {
                 Logger.getLogger(getName()).log(Level.SEVERE, null, e);
             }
         }
-        outputStats(Paths.get(dirName,"general_stats.csv").toString());
+        outputStats(Paths.get(dirName, "refactored", "general_stats.csv").toString());
     }
 }
