@@ -1,7 +1,0 @@
-1. [T1] Source: Task Order from supplier,Escalation Throw Intermediate Event Late delivery -> output: It is obligatory that Business participant Order from supplier after Late delivery
-2. [T2] Source: Escalation Throw Intermediate Event Late delivery,Resource Business participant,Sequence Flow >2 days -> output: It is obligatory that Late delivery after Business participant Check availability with supplier and if >2 days
-3. [T2] Source: Error End Event undeliverable,Resource Business participant,Sequence Flow no -> output: It is obligatory that undeliverable after Business participant Check availability with supplier and if no
-4. [T2] Source: Task Order from supplier,Resource Business participant,Resource Business participant,Sequence Flow <=2 days -> output: It is obligatory that Business participant Order from supplier after Business participant Check availability with supplier and if <=2 days
-5. [T1] Source: Task Check availability with supplier,None Start Event -> output: It is obligatory that Business participant Check availability with supplier after Process starts
-6. [T1] Source: None End Event article produced,Message Catch Intermediate Event article received -> output: It is obligatory that article produced after article received
-7. [T1] Source: Resource Business participant,Message Catch Intermediate Event article received,Resource Business participant,Task Order from supplier -> output: It is obligatory that article received after Business participant Order from supplier

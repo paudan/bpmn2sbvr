@@ -1,7 +1,0 @@
-1. [T1] Source: Task report bug,Message Start Event -> output: It is obligatory that User report bug after Process starts
-2. [T2] Source: SubProcess Fix bug,Resource Developer,Resource Developer,Sequence Flow Yes -> output: It is obligatory that Developer Fix bug after Developer Verify bug and if Yes
-3. [T2] Source: Task Notify user,Resource Developer,Resource Developer,Sequence Flow No -> output: It is obligatory that Developer Notify user after Developer Verify bug and if No
-4. [T7] Source: Data Object New application,Resource Developer,SubProcess Fix bug -> output: It is obligatory that New application is produced when Developer Fix bug
-5. [T1] Source: Resource Administrator,Task Notify user,Resource Administrator,Task Install new version -> output: It is obligatory that Administrator Notify user after Administrator Install new version
-6. [T1] Source: Resource Developer,Task Notify administrator,Resource Developer,SubProcess Fix bug -> output: It is obligatory that Developer Notify administrator after Developer Fix bug
-7. [T1] Source: Resource User,None End Event,Resource User,Task Use application -> output: It is obligatory that Process ends after User Use application

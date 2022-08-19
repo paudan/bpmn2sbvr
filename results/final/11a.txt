@@ -1,7 +1,0 @@
-1. [T2] Source: Task Prepare contract,Resource Sales rep,Resource Sales rep,Resource Sales manager -> output: It is permitted that Sales rep Prepare contract after Sales rep Calculate terms or Sales manager Prepare special terms
-2. [T5] Source: Task Send quote,Resource Sales rep,Task Prepare contract,Resource Sales rep,Task Assess risks,Resource Risk Analyst -> output: It is obligatory that Sales rep Send quote after Sales rep Prepare contract and Risk Analyst Assess risks
-3. [T1] Source: Resource Sales rep,None End Event Quote sent,Resource Sales rep,Task Send quote -> output: It is obligatory that Quote sent after Sales rep Send quote
-4. [T1] Source: Task Review request,Message Start Event Credit request -> output: It is obligatory that Sales rep Review request after Credit request
-5. [Complex] Source: Task Prepare special terms,Resource Sales manager,Sequence Flow no -> output: It is obligatory that Sales manager Prepare special terms if no, after ( Sales rep Review request if not ( Risk Analyst Assess risks ) )
-6. [T5] Source: Task Assess risks,Resource Risk Analyst,Task Review request,Resource Sales rep -> output: It is obligatory that Risk Analyst Assess risks after Sales rep Review request
-7. [Complex] Source: Task Calculate terms,Resource Sales rep,Sequence Flow yes -> output: It is obligatory that Sales rep Calculate terms if yes, after ( Sales rep Review request if not ( Risk Analyst Assess risks ) )
