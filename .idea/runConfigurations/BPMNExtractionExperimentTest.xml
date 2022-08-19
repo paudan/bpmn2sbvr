@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BPMNExtractionExperimentTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="bpmn2sbvr" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.ktu.model2sbvr.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="org.ktu.model2sbvr" />
+    <option name="MAIN_CLASS_NAME" value="org.ktu.model2sbvr.BPMNExtractionExperimentTest" />
+    <option name="METHOD_NAME" value="testExtractModels" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="VM_PARAMETERS" value="-Xmx3072M -Xss1024K -Dinstall.root=&quot;$MAGICDRAW19_DIR$&quot; -Dmd.plugins.dir=&quot;$MAGICDRAW19_DIR$/plugins&quot; -DLOCALCONFIG=true -jar &quot;$MAGICDRAW19_DIR$/openapi/ide/lib/com.nomagic.magicdraw.intellij.launcher.jar&quot;" />
+    <option name="PARAMETERS" value="" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
